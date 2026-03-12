@@ -1,0 +1,33 @@
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 90px; /* Width of the sidebar */
+  padding: 2rem;
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.page-content {
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    margin-bottom: 70px; /* Height of the mobile sidebar */
+    padding: 1rem;
+  }
+}
