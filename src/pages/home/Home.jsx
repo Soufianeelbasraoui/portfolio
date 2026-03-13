@@ -18,7 +18,6 @@ const Home = () => {
         <p className="home-description">
          Self-driven and detail-oriented junior full-stack web developer with a strong passion for building modern, efficient, and user-focused digital solutions. Skilled in HTML, CSS, JavaScript, React, PHP, Laravel, and MySQL, with a solid ability to transform ideas into functional and visually appealing applications.
          Actively seeking an entry-level opportunity within a dynamic organization where I can apply my technical skills, grow professionally, and contribute to impactful web projects.
-    
         </p>
 
         <div className="home-actions">

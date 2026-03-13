@@ -1,24 +1,26 @@
 import React from 'react';
 
+
 const ProjectThumbnail = ({ src, alt, badgeText }) => {
   return (
     <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '12px 12px 0 0', backgroundColor: 'var(--icon-bg)' }}>
       {src ? (
-        <img 
-          src={src} 
-          alt={alt} 
+        <img
+          src={src}
+          alt={alt || 'Project image'}
           style={{ width: '100%', height: '200px', objectFit: 'cover', display: 'block' }}
         />
       ) : (
         <div style={{ width: '100%', height: '200px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: '#1e293b' }}>
-          <span style={{ color: '#fff', opacity: 0.5, fontSize: '0.9rem' }}>Project Mockup</span>
+          <img src={src} alt="Default project" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.18 }} />
+          <span style={{ position: 'absolute', color: '#fff', opacity: 0.9, fontSize: '0.9rem' }}>Project Mockup</span>
         </div>
       )}
       {badgeText && (
         <span style={{
           position: 'absolute', top: '12px', right: '12px',
           backgroundColor: '#3b82f6', color: 'white',
-          padding: '4px 12px', borderRadius: '16px',
+          padding: '4px 12px', borderRadius: '5px',
           fontSize: '0.75rem', fontWeight: 'bold',
           letterSpacing: '0.5px'
         }}>
