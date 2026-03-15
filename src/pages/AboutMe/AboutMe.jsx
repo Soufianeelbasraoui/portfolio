@@ -5,34 +5,32 @@ import './AboutMe.css';
  
 
 const skills = [
-  { name: 'HTML5 / CSS3', percent: 90 },
-  { name: 'PHP / Laravel', percent: 85 },
-  { name: 'JavaScript (ES6+)', percent: 80 },
-  { name: 'MySQL & MongoDB', percent: 80 },
-  { name: 'React & Next.js', percent: 75 },
-  { name: 'Tailwind CSS ', percent: 90 },
-  {name:" UI Design",percent:60},
-  { name: 'Java', percent: 70 },
-    { name: 'Spring Boot', percent: 65 },
-  { name: 'Bootstrap CSS', percent: 90 }
+  { name: 'Java & Spring Boot', percent: 95 },
+  { name: 'PHP & Laravel', percent: 90 },
+  { name: 'MERN Stack (React, Node, Express)', percent: 85 },
+  { name: 'React.js & Next.js', percent: 90 },
+  { name: 'Tailwind CSS & UX Design', percent: 95 },
+  { name: 'SQL & NoSQL (MySQL, MongoDB)', percent: 85 },
+  { name: 'UML & System Architecture', percent: 90 },
+  { name: 'Figma (UI/UX Design)', percent: 85 }
 ];
 
 const timeline = [
   {
     title: "Baccalauréat en Sciences Physiques",
-    text: "J'ai obtenu un Baccalauréat en Sciences Physiques, une formation qui m'a permis d'acquérir un esprit analytique et une base scientifique solide."
+    text: "Solide base scientifique et esprit analytique développés durant le parcours secondaire."
   },
   {
     title: "Droit Arabe",
-    text: "J'ai poursuivi deux années d'études en Droit Arabe, ce qui m'a permis de développer une bonne compréhension des principes juridiques fondamentaux ainsi que des capacités d'analyse et de rédaction."
+    text: "Approfondissement des capacités d'analyse, de rédaction et de compréhension des structures complexes."
   },
   {
     title: "Technicien Spécialisé en Développement",
-    text: "J'ai obtenu un Diplôme de Technicien Spécialisé en Développement Digital (Web Full Stack) à l'ISTA Oued Zem, où j'ai appris à développer des applications web complètes en maîtrisant le frontend, le backend et les bases de données."
+    text: "Expertise Full Stack acquise (ISTA), avec une maîtrise du cycle de vie complet du développement logiciel."
   },
   {
     title: "École Numérique Ahmed Al Hansali",
-    text: "Je poursuis une formation à l'École Numérique Ahmed Al Hansali (ENAA), où je développe mes compétences en technologies du numérique et en développement web moderne."
+    text: "Perfectionnement continu des compétences architecturales et adoption des technologies web de pointe."
   }
 ];
 
@@ -72,19 +70,23 @@ const AboutMe = () => {
     <section className="about-container">
       <h2 className="section-title">ABOUT <span>ME</span></h2>
       <div className="about-intro">
-        <h3 className="subsection-title">Information About Me</h3>
+        <h3 className="subsection-title">Architectural Mindset & Full-Stack Expertise</h3>
         <p className="about-text">
-          Self-driven and detail-oriented junior full-stack web developer with a strong passion for building modern,
-          efficient, and user-focused digital solutions. Skilled in HTML, CSS, JavaScript, React, PHP, Laravel, and MySQL, 
-          with a solid ability to transform ideas into functional and visually appealing applications. Actively seeking an
-          entry-level opportunity within a dynamic organization where I can apply my technical skills, grow professionally, 
-          and contribute to impactful web projects.
+          As a results-driven Full-Stack Developer, I, <strong>Soufiane</strong>, bridge the gap between complex backend architectures and intuitive user experiences. 
+          Expert in the Java ecosystem (Spring Boot) and PHP (Laravel), with advanced proficiency in the MERN stack. 
+          My approach is rooted in solid software engineering principles, prioritizing UML modeling and architectural planning to ensure scalable, 
+          clean code. Beyond development, I leverage Figma and Tailwind CSS to craft modern, minimalist interfaces that resonate with users. 
+          I am dedicated to building high-performance applications that solve real-world problems through technical excellence.
         </p>
+        <div className="about-actions">
+           <a href="/cv.pdf" download className="btn-primary">Download CV</a>
+           <a href="/contact" className="btn-secondary">Contact Me</a>
+        </div>
       </div>
       
       <div className="skills-section">
-        <h3 className="subsection-title">My Skills</h3>
-        <p className="subsection-subtitle">Specialized in building end-to-end web applications with modern technologies.</p>
+        <h3 className="subsection-title">Technical Expertise</h3>
+        <p className="subsection-subtitle">Specialized in scalable full-stack applications and professional software modeling.</p>
         
         <div className="skills-grid">
           {skills.map(skill => (
@@ -94,7 +96,7 @@ const AboutMe = () => {
       </div>
 
       <div className="timeline-section">
-        <h3 className="subsection-title">My Timeline</h3>
+        <h3 className="subsection-title">Career Path</h3>
         
         <div className="timeline-grid">
           <TimelineColumn items={timelineLeft} />

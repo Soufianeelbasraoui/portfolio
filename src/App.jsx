@@ -4,6 +4,7 @@ import Home from './pages/home/Home';
 import AboutMe from './pages/AboutMe/AboutMe';
 import MyProjects from './pages/MyProjects/MyProjects';
 import ContactMe from './pages/contactMe/ContactMe';
+import AIAmbassador from './components/AIAmbassador/AIAmbassador';
 import './style/App.css';
 
 // Placeholder Pages
@@ -22,6 +23,7 @@ function App() {
           <Route path="/contact" element={<ContactMe />} />
         </Routes>
       </main>
+      <AIAmbassador />
     </div>
   );
 }
