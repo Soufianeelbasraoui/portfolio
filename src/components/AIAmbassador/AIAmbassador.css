@@ -7,8 +7,6 @@
 }
 
 .ai-ambassador-container.rtl {
-    right: auto;
-    left: 30px;
     direction: rtl;
 }
 
@@ -152,4 +150,11 @@
 }
 [data-theme='dark'] .ai-chat-input input {
     color: #eee;
+}
+
+@media (max-width: 768px) {
+    .ai-ambassador-container {
+        bottom: 90px;
+        right: 20px;
+    }
 }

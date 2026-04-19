@@ -2,13 +2,14 @@ import React from 'react';
 import ProfileAvatar from '../../components/ProfileAvatar/ProfileAvatar';
 import { FiDownload } from 'react-icons/fi';
 import './Home.css';
+import myImage from '../../assets/img.png';
 
 const Home = () => {
   return (
     <section className="home-container">
       <div className="home-content">
         <div className="avatar-wrapper">
-          <ProfileAvatar size="250px" />
+          <ProfileAvatar src={myImage}  />
         </div>
         
         <h1 className="home-title">

@@ -15,7 +15,7 @@
 }
 
 .home-title {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
   color: var(--text-color);
@@ -81,10 +81,10 @@
 
 @media (max-width: 768px) {
   .home-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .home-description {
     font-size: 1rem;
-    text-align: left;
+    text-align: center;
   }
 }

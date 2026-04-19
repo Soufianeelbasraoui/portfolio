@@ -31,33 +31,31 @@ const AIAmbassador = () => {
   };
 
   const getSystemResponse = (userInput) => {
-    // Basic logic to mimic the persona
     const input = userInput.toLowerCase();
-    if (input.includes('stack') || input.includes('tech') || input.includes('compétences') || input.includes('تقنيات')) {
+    
+    // Check developer info
+    if (input.includes('soufiane') || input.includes('developer') || input.includes('développeur') || input.includes('مطور') || input.includes('skills') || input.includes('compétences') || input.includes('مهارات') || input.includes('projects') || input.includes('projets') || input.includes('مشاريع') || input.includes('cv') || input.includes('who')) {
       return {
-        en: "Soufiane is an expert in the Java ecosystem (Spring Boot), PHP (Laravel), and the MERN stack. He specializes in building scalable Full-Stack applications with a strong focus on clean code and UML documentation.",
-        fr: "Soufiane est expert dans l'écosystème Java (Spring Boot), PHP (Laravel) et le MERN stack. Il est spécialisé dans la création d'applications Full-Stack évolutives avec un fort accent sur le clean code et la documentation UML.",
-        ar: "سفيان خبير في بيئة Java (Spring Boot) و PHP (Laravel) ومجموعة MERN. يتخصص في بناء تطبيقات Full-Stack قابلة للتوسع مع تركيز قوي على الكود النظيف وتوثيق UML."
+        en: "Soufiane is a Full-stack developer skilled in HTML, CSS, JavaScript, React, Bootstrap, PHP, Laravel, and MySQL. His projects include an E-commerce website (React + Laravel), an Admin dashboard, a Product management system, and an Online services platform. Feel free to contact Soufiane for your project!",
+        fr: "Soufiane est un développeur Full-stack maîtrisant HTML, CSS, JavaScript, React, Bootstrap, PHP, Laravel et MySQL. Ses projets incluent un site E-commerce (React + Laravel), un tableau de bord Admin, un système de gestion de produits et une plateforme de services en ligne. N'hésitez pas à contacter Soufiane pour votre projet !",
+        ar: "سفيان هو مطور Full-stack ماهر في HTML, CSS, JavaScript, React, Bootstrap, PHP, Laravel، و MySQL. تشمل مشاريعه موقع تجارة إلكترونية (React + Laravel)، لوحة تحكم، نظام إدارة المنتجات، ومنصة خدمات عبر الإنترنت. لا تتردد في التواصل مع سفيان من أجل مشروعك!"
       }[language];
     }
-    if (input.includes('cv') || input.includes('resumé') || input.includes('سيرة')) {
+    
+    // Check services
+    if (input.includes('service') || input.includes('خدمات') || input.includes('hire') || input.includes('work') || input.includes('travail') || input.includes('وظيفة') || input.includes('offer')) {
       return {
-        en: "You can download Soufiane's CV directly from the 'About Me' section or contact him via the form for a formal inquiry.",
-        fr: "Vous pouvez télécharger le CV de Soufiane directement depuis la section 'À propos de moi' ou le contacter via le formulaire.",
-        ar: "يمكنك تحميل السيرة الذاتية لـ سفيان مباشرة من قسم 'نبذة عني' أو التواصل معه عبر النموذج."
+        en: "Soufiane offers services in Website development, E-commerce solutions, UI/UX design, and Full-stack applications. Feel free to contact Soufiane for your project!",
+        fr: "Soufiane propose des services de développement de sites web, solutions E-commerce, design UI/UX et applications Full-stack. N'hésitez pas à contacter Soufiane pour votre projet !",
+        ar: "يقدم سفيان خدمات في تطوير مواقع الويب، حلول التجارة الإلكترونية، تصميم UI/UX، وتطبيقات Full-stack. لا تتردد في التواصل مع سفيان من أجل مشروعك!"
       }[language];
     }
-    if (input.includes('project') || input.includes('projet') || input.includes('réalisation') || input.includes('مشروع') || input.includes('أعمال')) {
-      return {
-        en: "Soufiane has a diverse portfolio including: \n• An E-Commerce ecosystem with real-time inventory.\n• A Crypto Analytics platform with advanced charting.\n• A SaaS Task Manager for collaborative workflows.\nAll built with professional architectures (MERN, Laravel, or Spring Boot).",
-        fr: "Soufiane possède un portfolio varié comprenant :\n• Un écosystème E-Commerce avec inventaire en temps réel.\n• Une plateforme Crypto Analytics avec graphiques avancés.\n• Un gestionnaire de tâches SaaS pour les flux de travail collaboratifs.\nTous conçus avec des architectures professionnelles (MERN, Laravel ou Spring Boot).",
-        ar: "يمتلك سفيان محفظة أعمال متنوعة تشمل:\n• منظومة تجارة إلكترونية مع تتبع مخزون في الوقت الفعلي.\n• منصة تحليلات عملات رقمية مع رسوم بيانية متقدمة.\n• نظام إدارة مهام SaaS لبيئات العمل التعاونية.\nجميعها مبنية بهندسات احترافية (MERN ، Laravel ، أو Spring Boot)."
-      }[language];
-    }
+    
+    // Default fallback
     return {
-      en: "I am here to represent Soufiane's technical expertise in software architecture, Full-Stack development, and UI/UX design. Feel free to ask about specific technologies like Spring Boot or React.",
-      fr: "Je suis ici pour représenter l'expertise technique de Soufiane en architecture logicielle, développement Full-Stack et design UI/UX. N'hésitez pas à poser des questions sur des technologies spécifiques comme Spring Boot ou React.",
-      ar: "أنا هنا لتمثيل الخبرة التقنية لـ سفيان في هندسة البرمجيات، وتطوير Full-Stack، وتصميم UI/UX. لا تتردد في السؤال عن تقنيات محددة مثل Spring Boot أو React."
+      en: "I can help you mainly with information about this developer and web development topics. Feel free to contact Soufiane for your project!",
+      fr: "Je peux principalement vous aider avec des informations sur ce développeur et des sujets de développement web. N'hésitez pas à contacter Soufiane pour votre projet !",
+      ar: "يمكنني مساعدتك بشكل أساسي في تقديم معلومات حول هذا المطور ومواضيع تطوير الويب. لا تتردد في التواصل مع سفيان من أجل مشروعك!"
     }[language];
   };
 

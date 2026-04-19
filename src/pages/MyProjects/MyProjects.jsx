@@ -9,14 +9,14 @@ const projects = [
     title: 'Crypto Analytics Port',
     badge: 'VUE',
     description: 'Real-time cryptocurrency tracking platform with advanced charting tools and personalized alert systems.',
-    img: 'https://picsum.photos/600/400?random=1',
+    img: DefaultImg,
     link: '#'
   },
   {
     title: 'E-Commerce Ecosystem',
     badge: 'REACT',
     description: 'A comprehensive online shopping solution with real-time inventory management and secure payment gateway integration.',
-    img: DefaultImg,
+    img: 'https://picsum.photos/600/400?random=1',
     link: '#'
   },
   {

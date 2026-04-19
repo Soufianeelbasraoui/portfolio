@@ -28,12 +28,11 @@ const ContactMe = () => {
            
           </div>
           
-          <div className="contact-socials">
-            <a href="#" className="social-icon"><FiGithub /></a>
-            <a href="#" className="social-icon"><FiLinkedin /></a>
-             <a href="#" className="social-icon"><FiInstagram /></a>
-
-          </div>
+         <div className="contact-socials">
+               <a href="https://github.com/Soufianeelbasraoui" className="social-icon" target="_blank" rel="noopener noreferrer" > <FiGithub /></a>
+               <a href="https://linkedin.com/in/soufiane-el-basraoui" className="social-icon" target="_blank" rel="noopener noreferrer"><FiLinkedin /></a>
+               <a href="https://instagram.com/soufiane_elbs"  className="social-icon"  target="_blank" rel="noopener noreferrer"><FiInstagram /></a>
+        </div>
         </div>
         
         {/* Right Side: Form */}
