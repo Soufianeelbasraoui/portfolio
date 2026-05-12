@@ -5,14 +5,17 @@ import './AIAmbassador.css';
 const AIAmbassador = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [language, setLanguage] = useState('en');
+
+  const initialBotMessages = {
+    en: "Welcome. I am Soufiane's AI Ambassador. I can guide you through his high-level Full-Stack projects, technical architecture, and business solutions. How can I assist you?",
+    fr: "Bienvenue. Je suis l'Ambassadeur IA de Soufiane. Je peux vous guider à travers ses projets Full-Stack de haut niveau, son architecture technique et ses solutions business. Comment puis-je vous aider ?",
+    ar: "مرحباً. أنا السفير الذكي لـ سفيان. يمكنني إرشادك عبر مشاريعه Full-Stack عالية المستوى، ومعماريته التقنية، وحلول الأعمال الخاصة به. كيف يمكنني مساعدتك؟"
+  };
+
   const [messages, setMessages] = useState([
     {
       type: 'bot',
-      text: {
-        en: "Hello! I am the Professional AI Ambassador for Soufiane. How can I assist you in exploring his developer profile?",
-        fr: "Bonjour ! Je suis l'Ambassadeur IA Professionnel de Soufiane. Comment puis-je vous aider à explorer son profil de développeur ?",
-        ar: "مرحباً! أنا السفير الاصطناعي المهني لـ سفيان. كيف يمكنني مساعدتك في استكشاف ملف تعريف المطور الخاص به؟"
-      }[language]
+      text: initialBotMessages['en']
     }
   ]);
 
@@ -22,40 +25,45 @@ const AIAmbassador = () => {
     setLanguage(lang);
     setMessages([{
       type: 'bot',
-      text: {
-        en: "Hello! I am the Professional AI Ambassador for Soufiane. How can I assist you in exploring his developer profile?",
-        fr: "Bonjour ! Je suis l'Ambassadeur IA Professionnel de Soufiane. Comment puis-je vous aider à explorer son profil de développeur ?",
-        ar: "مرحباً! أنا السفير الاصطناعي المهني لـ سفيان. كيف يمكنني مساعدتك في استكشاف ملف تعريف المطور الخاص به؟"
-      }[lang]
+      text: initialBotMessages[lang]
     }]);
   };
 
   const getSystemResponse = (userInput) => {
     const input = userInput.toLowerCase();
     
-    // Check developer info
-    if (input.includes('soufiane') || input.includes('developer') || input.includes('développeur') || input.includes('مطور') || input.includes('skills') || input.includes('compétences') || input.includes('مهارات') || input.includes('projects') || input.includes('projets') || input.includes('مشاريع') || input.includes('cv') || input.includes('who')) {
+    // Technical inquiry
+    if (input.includes('stack') || input.includes('react') || input.includes('laravel') || input.includes('spring') || input.includes('architecture') || input.includes('tech') || input.includes('docker') || input.includes('base de données') || input.includes('database')) {
       return {
-        en: "Soufiane is a Full-stack developer skilled in HTML, CSS, JavaScript, React, Bootstrap, PHP, Laravel, and MySQL. His projects include an E-commerce website (React + Laravel), an Admin dashboard, a Product management system, and an Online services platform. Feel free to contact Soufiane for your project!",
-        fr: "Soufiane est un développeur Full-stack maîtrisant HTML, CSS, JavaScript, React, Bootstrap, PHP, Laravel et MySQL. Ses projets incluent un site E-commerce (React + Laravel), un tableau de bord Admin, un système de gestion de produits et une plateforme de services en ligne. N'hésitez pas à contacter Soufiane pour votre projet !",
-        ar: "سفيان هو مطور Full-stack ماهر في HTML, CSS, JavaScript, React, Bootstrap, PHP, Laravel، و MySQL. تشمل مشاريعه موقع تجارة إلكترونية (React + Laravel)، لوحة تحكم، نظام إدارة المنتجات، ومنصة خدمات عبر الإنترنت. لا تتردد في التواصل مع سفيان من أجل مشروعك!"
+        en: "Soufiane doesn't just use React; he integrates it with Spring Boot to build industrial systems like FleetFlow, or Laravel for modern e-commerce like Guza Shop. His expertise spans MERN, state management, Docker, and UML modeling. You can explore his complete architecture implementations on his GitHub!",
+        fr: "Soufiane ne se contente pas de React; il l'intègre à des architectures Spring Boot pour créer des systèmes industriels comme FleetFlow, ou Laravel pour l'e-commerce (Guza Shop). Son expertise couvre le MERN, le state management, Docker et la modélisation UML. Explorez son code sur GitHub !",
+        ar: "سفيان لا يكتفي باستخدام React فحسب؛ بل يدمجه مع Spring Boot لبناء أنظمة صناعية مثل FleetFlow، أو Laravel لتطبيقات التجارة الإلكترونية مثل Guza Shop. خبرته تشمل MERN، وإدارة الحالة، و Docker، ونمذجة UML. يمكنك استكشاف كود المشاريع بالكامل على GitHub!"
       }[language];
     }
     
-    // Check services
-    if (input.includes('service') || input.includes('خدمات') || input.includes('hire') || input.includes('work') || input.includes('travail') || input.includes('وظيفة') || input.includes('offer')) {
+    // General developer inquiry
+    if (input.includes('soufiane') || input.includes('developer') || input.includes('développeur') || input.includes('مطور') || input.includes('skills') || input.includes('compétences') || input.includes('مهارات') || input.includes('projects') || input.includes('projets') || input.includes('مشاريع') || input.includes('cv') || input.includes('who')) {
       return {
-        en: "Soufiane offers services in Website development, E-commerce solutions, UI/UX design, and Full-stack applications. Feel free to contact Soufiane for your project!",
-        fr: "Soufiane propose des services de développement de sites web, solutions E-commerce, design UI/UX et applications Full-stack. N'hésitez pas à contacter Soufiane pour votre projet !",
-        ar: "يقدم سفيان خدمات في تطوير مواقع الويب، حلول التجارة الإلكترونية، تصميم UI/UX، وتطبيقات Full-stack. لا تتردد في التواصل مع سفيان من أجل مشروعك!"
+        en: "Soufiane is a high-level Full-Stack Developer who builds robust business solutions. Whether it's the complex logistics of FleetFlow, precise billing in FinPay, or the sleek UI/UX of Guza Shop, he delivers performance and innovation. Ready to collaborate? Hit the Contact button!",
+        fr: "Soufiane est un développeur Full-Stack de haut niveau qui crée des solutions business robustes. Qu'il s'agisse de la logistique complexe de FleetFlow, de la facturation précise de FinPay ou de l'UX/UI minimaliste de Guza Shop, il allie performance et innovation. Prêt à collaborer ? Cliquez sur Contact !",
+        ar: "سفيان مطور Full-Stack عالي المستوى يبني حلول أعمال قوية. سواء كانت لوجستيات FleetFlow المعقدة، أو الفواتير الدقيقة في FinPay، أو واجهة المستخدم الأنيقة لـ Guza Shop، فإنه يوفر الأداء والابتكار. هل أنت مستعد للتعاون؟ اضغط على زر التواصل!"
+      }[language];
+    }
+    
+    // Services / Hire
+    if (input.includes('service') || input.includes('خدمات') || input.includes('hire') || input.includes('work') || input.includes('travail') || input.includes('وظيفة') || input.includes('offer') || input.includes('emploi')) {
+      return {
+        en: "Looking for performance, scalable data architecture, and a modern minimalist design? Soufiane builds complete systems tailored to your business goals. I highly recommend clicking the Contact button below so we can discuss your vision.",
+        fr: "Vous recherchez performance, architecture de données scalable, et design minimaliste moderne ? Soufiane construit des systèmes complets adaptés à vos objectifs. Je vous invite à cliquer sur le bouton Contact pour discuter de votre vision.",
+        ar: "هل تبحث عن الأداء، معمارية بيانات قابلة للتطوير، وتصميم حديث وبسيط؟ يبني سفيان أنظمة كاملة مصممة خصيصًا لأهداف عملك. أنصحك بالضغط على زر التواصل بالأسفل لمناقشة رؤيتك."
       }[language];
     }
     
     // Default fallback
     return {
-      en: "I can help you mainly with information about this developer and web development topics. Feel free to contact Soufiane for your project!",
-      fr: "Je peux principalement vous aider avec des informations sur ce développeur et des sujets de développement web. N'hésitez pas à contacter Soufiane pour votre projet !",
-      ar: "يمكنني مساعدتك بشكل أساسي في تقديم معلومات حول هذا المطور ومواضيع تطوير الويب. لا تتردد في التواصل مع سفيان من أجل مشروعك!"
+      en: "I am confident Soufiane can bring immense value to your next project. Would you like to hear about his architectural expertise, his complex projects like FleetFlow, or would you prefer to get in touch directly via the Contact button?",
+      fr: "Je suis convaincu que Soufiane apportera une immense valeur à votre projet. Souhaitez-vous en savoir plus sur son expertise architecturale, ses projets complexes comme FleetFlow, ou préférez-vous le contacter directement via le bouton Contact ?",
+      ar: "أنا واثق من أن سفيان سيضيف قيمة هائلة لمشروعك القادم. هل ترغب في معرفة المزيد عن خبرته المعمارية، ومشاريعه المعقدة مثل FleetFlow، أم تفضل التواصل معه مباشرة عبر زر التواصل؟"
     }[language];
   };
 

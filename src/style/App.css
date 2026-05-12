@@ -31,3 +31,10 @@
     padding: 1rem;
   }
 }
+
+@media (max-width: 480px) {
+  .main-content {
+    margin-bottom: 60px; /* Adjusted height for smaller mobile sidebar */
+    padding: 0.5rem;
+  }
+}
