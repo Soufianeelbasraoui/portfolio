@@ -37,7 +37,7 @@ const MyProjects = () => {
             <ProjectThumbnail 
               src={project.img} 
               alt={project.title}
-              badgeText={project.badge} 
+        
             />
             <div className="project-info">
               <h3 className="project-title">{project.title}</h3>

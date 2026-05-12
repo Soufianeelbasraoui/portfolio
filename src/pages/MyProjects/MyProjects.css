@@ -88,13 +88,16 @@
   background-color: var(--toggle-bg-hover);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .projects-container {
+    padding: 3rem 1.5rem;
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
   }

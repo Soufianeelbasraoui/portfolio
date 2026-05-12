@@ -199,6 +199,18 @@
   padding-top: 15px; /* Push text down to align nicely with the circle */
 }
 
+@media (max-width: 1024px) {
+  .about-container {
+    padding: 3rem 1.5rem;
+  }
+  .skills-grid {
+    gap: 1rem 1.5rem;
+  }
+  .timeline-grid {
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .skills-grid {
     grid-template-columns: 1fr;
@@ -219,6 +231,9 @@
   .section-title {
     font-size: 1.8rem;
     margin-bottom: 2rem;
+  }
+  .about-text {
+    font-size: 1rem;
   }
 }
 
