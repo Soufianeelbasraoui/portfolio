@@ -195,6 +195,18 @@
   padding-top: 15px; 
 }
 
+@media (max-width: 1024px) {
+  .about-container {
+    padding: 3rem 1.5rem;
+  }
+  .skills-grid {
+    gap: 1rem 1.5rem;
+  }
+  .timeline-grid {
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .skills-grid {
     grid-template-columns: 1fr;
@@ -207,5 +219,47 @@
   
   .timeline-column + .timeline-column {
     margin-top: 4rem;
+  }
+  
+  .about-container {
+    padding: 2rem 1rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  .about-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 1.5rem 0.5rem;
+  }
+  .about-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .btn-primary, .btn-secondary {
+    text-align: center;
+    width: 100%;
+  }
+  .timeline-column {
+    padding-left: 50px;
+  }
+  .timeline-icon {
+    left: -50px;
+  }
+  .timeline-line {
+    left: 21px; /* Mid-point of 42px icon */
+  }
+  .timeline-icon > div {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .timeline-content {
+    font-size: 0.9rem;
+    padding-top: 5px;
   }
 }

@@ -88,14 +88,37 @@
   background-color: var(--toggle-bg-hover);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .projects-container {
+    padding: 3rem 1.5rem;
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+  .projects-container {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-container {
+    padding: 1.5rem 0.5rem;
+  }
+  .project-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .btn-demo, .btn-code {
+    font-size: 0.85rem;
+    padding: 0.8rem 0;
+  }
+  .project-info {
+    padding: 1rem;
   }
 }

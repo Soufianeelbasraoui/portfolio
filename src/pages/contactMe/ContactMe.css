@@ -1,7 +1,7 @@
 .contact-container {
   width: 100%;
   max-width: 900px;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   margin: 0 auto;
   animation: fadeIn 0.5s ease;
 }
@@ -43,7 +43,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  margin-bottom: auto; 
+  margin-bottom: auto; /* Pushes socials to the bottom */
 }
 
 .info-item {
@@ -67,7 +67,7 @@
 .contact-socials {
   display: flex;
   gap: 1rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .social-icon {
@@ -89,7 +89,7 @@
 
 .contact-form-section {
   flex: 1.2;
-  padding: 3rem 2rem;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -98,7 +98,7 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .form-group {
@@ -119,7 +119,7 @@
   background-color: var(--bg-color);
   border: 1px solid var(--border-color);
   color: var(--text-color);
-  padding: 0.8rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
   font-size: 0.95rem;
   font-family: inherit;
@@ -155,8 +155,32 @@
   box-shadow: 0 6px 14px rgba(255, 140, 0, 0.4);
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1024px) {
   .contact-card {
     flex-direction: column;
+  }
+  .contact-container {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 1rem 0.5rem;
+  }
+  .info-title {
+    font-size: 1.5rem;
+  }
+  .contact-info {
+    padding: 2rem 1.5rem;
+  }
+  .contact-form-section {
+    padding: 2rem 1.5rem;
   }
 }
