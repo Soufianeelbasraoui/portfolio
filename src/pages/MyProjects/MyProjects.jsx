@@ -3,6 +3,8 @@ import { FiExternalLink } from 'react-icons/fi';
 import ProjectThumbnail from '../../components/ProjectThumbnail/ProjectThumbnail';
 import './MyProjects.css';
 import DefaultImg from "../../assets/Crypto.png";
+import food from "../../assets/food-recipe.png"
+
 
 const projects = [
   {
@@ -14,7 +16,7 @@ const projects = [
   {
     title: 'E-Commerce Ecosystem',
     description: 'A comprehensive online shopping solution with real-time inventory management and secure payment gateway integration.',
-    img: 'https://picsum.photos/600/400?random=1',
+    img: food,
     link: '#'
   },
   {

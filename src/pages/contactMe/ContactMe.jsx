@@ -8,7 +8,7 @@ const ContactMe = () => {
       <h2 className="section-title">Contact <span>Me</span></h2>
       
       <div className="contact-card">
-        {/* Left Side: Info */}
+      
         <div className="contact-info">
           <h3 className="info-title">Let's talk about your project</h3>
           <p className="info-desc">
@@ -34,8 +34,7 @@ const ContactMe = () => {
                <a href="https://instagram.com/soufiane_elbs"  className="social-icon"  target="_blank" rel="noopener noreferrer"><FiInstagram /></a>
         </div>
         </div>
-        
-        {/* Right Side: Form */}
+  
         <div className="contact-form-section">
           <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
             <div className="form-group">

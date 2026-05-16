@@ -7,7 +7,6 @@ import ContactMe from './pages/contactMe/ContactMe';
 import AIAmbassador from './components/AIAmbassador/AIAmbassador';
 import './style/App.css';
 
-// Placeholder Pages
 const MyServices = () => <div className="page-content" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', padding: '4rem', color: 'var(--text-color)' }}><h1>My Services (Coming Soon)</h1></div>;
 
 function App() {

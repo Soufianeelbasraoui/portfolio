@@ -37,7 +37,6 @@
   margin-right: auto;
 }
 
-/* About Intro Text */
 .about-intro {
   margin-bottom: 3rem;
   padding: 0 1rem;
@@ -92,7 +91,6 @@
   border-color: var(--text-color);
 }
 
-/* Skills */
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -101,11 +99,11 @@
 }
 
 .skill-box {
-  background-color: var(--bg-color); /* Match mockup white bg */
+  background-color: var(--bg-color); 
   padding: 1.2rem;
   border-radius: 4px;
-  border: 1px solid var(--border-color); /* Very light gray border */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.02); /* Minimal shadow */
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02); 
 }
 
 .skill-header {
@@ -114,7 +112,7 @@
   margin-bottom: 0.8rem;
   font-weight: 700;
   font-size: 0.85rem;
-  color: var(--text-color); /* Darker text */
+  color: var(--text-color)
 }
 
 .skill-percent {
@@ -125,7 +123,7 @@
 .skill-bar-bg {
   width: 100%;
   height: 6px;
-  background-color: var(--icon-bg); /* Very light gray bg */
+  background-color: var(--icon-bg); 
   border-radius: 4px;
   overflow: hidden;
 }
@@ -137,7 +135,6 @@
   transition: width 1s ease-in-out;
 }
 
-/* Timeline */
 .timeline-section {
   padding-top: 1rem;
 }
@@ -154,19 +151,19 @@
 
 .timeline-column {
   position: relative;
-  padding-left: 70px; /* Space for the line and icon */
+  padding-left: 70px; 
   display: flex;
   flex-direction: column;
-  gap: 4rem; /* Gap between items vertically */
+  gap: 4rem;
 }
 
 .timeline-line {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 31px; /* Mid-point of 62px icon-circle container. 25px radius + offset */
+  left: 31px; 
   width: 1px;
-  background-color: var(--text-color); /* The line is dark */
+  background-color: var(--text-color); 
   z-index: 1;
 }
 
@@ -176,27 +173,26 @@
 
 .timeline-icon {
   position: absolute;
-  top: -5px; /* Offset to align with first line of text */
+  top: -5px; 
   left: -70px;
   z-index: 2;
-  background-color: var(--bg-color); /* Covers the line behind the circle */
+  background-color: var(--bg-color); 
   border-radius: 50%;
-  padding: 6px; /* gives the "gap" in the line where circle sits */
+  padding: 6px; 
 }
 
-/* Override IconCircle size for this specific usecase */
 .timeline-icon > div {
   width: 50px !important;
   height: 50px !important;
-  background-color: var(--icon-bg-hover) !important; /* light gray circle */
-  color: var(--text-color) !important; /* dark briefcase */
+  background-color: var(--icon-bg-hover) !important; 
+  color: var(--text-color) !important; 
 }
 
 .timeline-content {
   font-size: 0.95rem;
   color: var(--text-color);
   line-height: 1.6;
-  padding-top: 15px; /* Push text down to align nicely with the circle */
+  padding-top: 15px; 
 }
 
 @media (max-width: 1024px) {
@@ -218,7 +214,7 @@
   
   .timeline-grid {
     grid-template-columns: 1fr;
-    gap: 0; /* Let column gap handle it */
+    gap: 0; 
   }
   
   .timeline-column + .timeline-column {
