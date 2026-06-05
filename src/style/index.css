@@ -55,7 +55,7 @@ button {
   font-family: inherit;
   cursor: pointer;
   border: none;
-  border-radius: 8px;
+  border-radius: 7px;
   transition: all 0.3s ease;
 }
 
