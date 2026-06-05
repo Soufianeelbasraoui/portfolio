@@ -5,14 +5,14 @@ import './AboutMe.css';
  
 
 const skills = [
-  { name: 'Java & Spring Boot', percent: 95 },
+  { name: 'Java & Spring Boot', percent: 90 },
   { name: 'PHP & Laravel', percent: 90 },
   { name: 'MERN Stack (React, Node, Express)', percent: 85 },
   { name: 'React.js & Next.js', percent: 90 },
-  { name: 'Tailwind CSS & UX Design', percent: 95 },
+  { name: 'Tailwind CSS & bootstrap css', percent: 80 },
   { name: 'SQL & NoSQL (MySQL, MongoDB)', percent: 85 },
   { name: 'UML & System Architecture', percent: 90 },
-  { name: 'Figma (UI/UX Design)', percent: 85 }
+  { name: 'Figma (UI/UX Design)', percent: 70 }
 ];
 
 const timeline = [
