@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiCode, FiLayout, FiDatabase, FiServer, FiMobile, FiSettings } from 'react-icons/fi';
+import { FiCode, FiLayout, FiDatabase, FiServer, FiSmartphone, FiSettings } from 'react-icons/fi';
 import './MyServices.css';
 
 const services = [
@@ -24,7 +24,7 @@ const services = [
     description: 'Delivering end-to-end web applications, from conceptual design to deployment and maintenance.'
   },
   {
-    icon: <FiMobile />,
+    icon: <FiSmartphone />,
     title: 'Responsive Design',
     description: 'Ensuring your application looks and works perfectly on all devices, from desktops to mobile phones.'
   },
