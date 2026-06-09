@@ -11,7 +11,7 @@ const services = [
   {
     icon: <FiServer />,
     title: 'Backend Development',
-    description: 'Building robust and scalable server-side applications and APIs using Laravel, Node.js, and PHP.'
+    description: 'Building robust and scalable server-side applications and APIs using java Spring Boot, Node.js, and laravel.'
   },
   {
     icon: <FiDatabase />,

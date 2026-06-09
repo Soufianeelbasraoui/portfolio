@@ -8,7 +8,7 @@
 .section-title {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: var(--text-color);
 }
 
@@ -24,8 +24,8 @@
 
 .service-card {
   background: var(--card-bg);
-  padding: 2.5rem;
-  border-radius: 1.5rem;
+  padding: 2rem;
+  border-radius: 3px;
   transition: all 0.3s ease;
   border: 1px solid var(--border-color);
   display: flex;
@@ -41,7 +41,7 @@
 }
 
 .service-icon {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--primary-color);
   margin-bottom: 1.5rem;
   display: flex;
