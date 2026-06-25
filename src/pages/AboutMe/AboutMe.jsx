@@ -17,25 +17,17 @@ const skills = [
 
 const timeline = [
   {
-    title: "Baccalauréat en Sciences Physiques",
-    text: "Solide base scientifique et esprit analytique développés durant le parcours secondaire."
-  },
-  {
-    title: "Droit Arabe",
-    text: "Approfondissement des capacités d'analyse, de rédaction et de compréhension des structures complexes."
-  },
-  {
     title: "Technicien Spécialisé en Développement",
-    text: "Expertise Full Stack acquise (ISTA), avec une maîtrise du cycle de vie complet du développement logiciel."
+    text: "Technicien Spécialisé en Développement (ISTA), spécialisé en développement Full Stack, avec une solide compréhension du cycle de vie logiciel et des bonnes pratiques de conception et d’intégration."
   },
   {
     title: "École Numérique Ahmed Al Hansali",
-    text: "Perfectionnement continu des compétences architecturales et adoption des technologies web de pointe."
+    text: "Développeur web Full Stack spécialisé en Java et Spring Boot, avec une solide maîtrise des principes et des design patterns, garantissant des applications robustes, maintenables et évolutives."
   }
 ];
 
-const timelineLeft = [timeline[0], timeline[2]];
-const timelineRight = [timeline[1], timeline[3]];
+const timelineLeft = timeline.filter((_, index) => index % 2 === 0);
+const timelineRight = timeline.filter((_, index) => index % 2 !== 0);
 
 const SkillBar = ({ name, percent }) => (
   <div className="skill-box">
@@ -52,16 +44,22 @@ const SkillBar = ({ name, percent }) => (
 const TimelineColumn = ({ items }) => (
   <div className="timeline-column">
     <div className="timeline-line"></div>
-    {items.map((item, index) => (
-      <div className="timeline-item" key={index}>
-        <div className="timeline-icon">
-          <IconCircle icon={<FiBriefcase />} isActive={false} />
+    {items.map((item, index) => {
+      if (!item) return null;
+      return (
+        <div className="timeline-item" key={index}>
+          <div className="timeline-icon">
+            <IconCircle icon={<FiBriefcase />} isActive={false} />
+          </div>
+          <div className="timeline-content">
+            <h4 style={{ margin: '0 0 0.5rem 0', fontSize: '1.05rem', color: 'var(--text-color)', fontWeight: '700' }}>
+              {item.title}
+            </h4>
+            <p style={{ margin: 0, color: 'var(--text-muted)' }}>{item.text}</p>
+          </div>
         </div>
-        <div className="timeline-content">
-          <p>{item.text}</p>
-        </div>
-      </div>
-    ))}
+      );
+    })}
   </div>
 );
 
