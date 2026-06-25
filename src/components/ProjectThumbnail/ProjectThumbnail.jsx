@@ -22,7 +22,7 @@ const ProjectThumbnail = ({ src, alt, badgeText }) => {
         <span style={{
           position: 'absolute', top: '15px', right: '15px',
           background: 'linear-gradient(135deg, #FF8C00, #ff5e00)', color: 'white',
-          padding: '6px 14px', borderRadius: '20px',
+          padding: '6px 14px', borderRadius: '5px',
           fontSize: '0.75rem', fontWeight: 'bold',
           letterSpacing: '0.5px',
           boxShadow: '0 4px 10px rgba(255, 140, 0, 0.4)',
