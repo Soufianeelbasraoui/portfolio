@@ -6,34 +6,37 @@ import './MyProjects.css';
 
 import DefaultImg from "../../assets/Crypto.png";
 import food from "../../assets/food-recipe.png";
+import restApp from "../../assets/restApp.png";
+import healt  from "../../assets/healt.png";
+
 
 const projects = [
   {
-    title: 'Crypto Analytics Port',
+    title: 'Système de Gestion Médicale ',
     description:
-      'Real-time cryptocurrency tracking platform with advanced charting tools and personalized alert systems.',
-    img: DefaultImg,
-    demoLink: 'https://your-demo-link.com',
-    codeLink: 'https://github.com/your-github-repo',
-    tags: ['React.js', 'Chart.js', 'Tailwind', 'Supabase']
+      ' API REST sécurisée (JWT) pour la gestion des patients, médecins, RDV et dossiers médicaux. Rôles, pagination, Flyway, Docker.',
+    img: healt,
+    demoLink: 'https://github.com/ENAA-School-Student/Syst-me-de-Gestion-M-dicale.git',
+    codeLink: 'https://github.com/ENAA-School-Student/Syst-me-de-Gestion-M-dicale.git',
+    tags: ['Java 21', 'Spring Boot', 'MySQL','JWT','Flyway','Docker']
   },
   {
-    title: 'E-Commerce Ecosystem',
+    title: 'Recipe App -food recipe search',
     description:
-      'A comprehensive online shopping solution with real-time inventory management and secure payment gateway integration.',
+      'Application web responsive de recherche de recettes avec intégration de l’API TheMealDB et interface moderne en mode sombre',
     img: food,
     demoLink: 'https://recipe-app-brown-chi.vercel.app/',
     codeLink: 'https://github.com/Soufianeelbasraoui/Recipe-App.git',
-    tags: ['React.js', 'Redux', 'Node.js', 'Stripe']
+    tags: ['Html', 'Css', 'JavaScript','API']
   },
   {
-    title: 'SaaS Task Manager',
+    title: 'Restaurant App',
     description:
-      'Collaborative project management tool featuring drag-and-drop boards, automated reporting, and Slack integration.',
-    img: 'https://picsum.photos/600/400?random=3',
-    demoLink: 'https://your-demo-link.com',
-    codeLink: 'https://github.com/your-github-repo',
-    tags: ['React.js', 'Express', 'MongoDB', 'Socket.io']
+      'Application full-stack pour gestion de restaurant avec API Laravel et interface React.',
+    img:restApp,
+    demoLink: 'https://github.com/Soufianeelbasraoui/Restaurant.git',
+    codeLink: 'https://github.com/Soufianeelbasraoui/Restaurant.git',
+    tags: ['React.js', 'Laravel','MySQL','CSS']
   }
 ];
 
