@@ -17,8 +17,7 @@ const Home = () => {
         </h1>
         
         <p className="home-description">
-         Self-driven and detail-oriented junior full-stack web developer with a strong passion for building modern, efficient, and user-focused digital solutions. Skilled in HTML, CSS, JavaScript, React, PHP, Laravel, and MySQL, with a solid ability to transform ideas into functional and visually appealing applications.
-         Actively seeking an entry-level opportunity within a dynamic organization where I can apply my technical skills, grow professionally, and contribute to impactful web projects.
+       I'm a Full-Stack Developer with a strong focus on Java, Spring Boot, and React. I specialize in developing scalable backend services, RESTful APIs, and modern frontend applications. With experience in MySQL, MongoDB, Laravel, and Node.js, I'm passionate about building reliable software, writing clean code, and continuously learning new technologies.
         </p>
 
         <div className="home-actions">
