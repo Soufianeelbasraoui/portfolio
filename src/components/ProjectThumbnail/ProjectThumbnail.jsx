@@ -3,16 +3,25 @@ import React from 'react';
 
 const ProjectThumbnail = ({ src, alt, badgeText }) => {
   return (
-    <div className="project-thumbnail-wrapper" style={{ position: 'relative', overflow: 'hidden', borderRadius: '12px 12px 0 0', backgroundColor: 'var(--icon-bg)' }}>
+    <div className="project-thumbnail-wrapper" style={{ position: 'relative', overflow: 'hidden', borderRadius: '12px 12px 0 0', backgroundColor: '#0f172a', width: '100%', height: '100%' }}>
       {src ? (
         <img
           src={src}
           alt={alt || 'Project image'}
-          style={{ width: '100%', height: '220px', objectFit: 'cover', display: 'block', transition: 'transform 0.5s ease' }}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'contain',
+            display: 'block',
+            transition: 'transform 0.5s ease',
+            willChange: 'transform',
+            backfaceVisibility: 'hidden',
+            WebkitBackfaceVisibility: 'hidden',
+          }}
           className="thumbnail-img"
         />
       ) : (
-        <div style={{ width: '100%', height: '220px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: '#1e293b' }}>
+        <div style={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: '#1e293b' }}>
           <img src={src} alt="Default project" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.18, transition: 'transform 0.5s ease' }} className="thumbnail-img" />
           <span style={{ position: 'absolute', color: '#fff', opacity: 0.9, fontSize: '0.9rem', zIndex: 2 }}>Project Mockup</span>
         </div>

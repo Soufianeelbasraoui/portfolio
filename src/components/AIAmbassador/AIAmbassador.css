@@ -136,6 +136,67 @@
     cursor: pointer;
 }
 
+/* Quick Action Chips */
+.ai-quick-chips {
+    display: flex;
+    gap: 6px;
+    padding: 8px 12px;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-top: 1px solid var(--border-color, #eee);
+    background: var(--bg-sidebar, #fcfcfc);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.ai-quick-chips::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.ai-quick-chips {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.ai-chip {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: var(--bg-color, #fff);
+    border: 1px solid var(--border-color, #ddd);
+    color: var(--text-main, #444);
+    font-size: 11px;
+    font-weight: 500;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.ai-chip:hover {
+    background-color: var(--primary-color, #007bff);
+    border-color: var(--primary-color, #007bff);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+[data-theme='dark'] .ai-quick-chips {
+    background: #181818;
+    border-top-color: #333;
+}
+
+[data-theme='dark'] .ai-chip {
+    background-color: #252525;
+    border-color: #444;
+    color: #ccc;
+}
+
+[data-theme='dark'] .ai-chip:hover {
+    background-color: var(--primary-color, #007bff);
+    border-color: var(--primary-color, #007bff);
+    color: #fff;
+}
+
+
 /* Dark mode adjustments if variables are present */
 [data-theme='dark'] .ai-chat-window {
     background: #1e1e1e;

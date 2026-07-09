@@ -35,7 +35,7 @@
 }
 
 .project-card:hover .thumbnail-img {
-  transform: scale(1.08) !important;
+  transform: scale(1.05) translateZ(0) !important;
 }
 
 /* ── Thumbnail Container + Overlay ── */
@@ -43,10 +43,16 @@
   position: relative;
   overflow: hidden;
   border-radius: 3px 3px 0 0;
+  aspect-ratio: 16 / 9;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .project-thumbnail-container .project-thumbnail-wrapper {
   border-radius: 3px 3px 0 0 !important;
+  width: 100%;
+  height: 100%;
 }
 
 .project-image-overlay {

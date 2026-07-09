@@ -42,30 +42,36 @@
 }
 
 .btn-primary {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 3px;
+  gap: 8px;
   background-color: var(--bg-color);
   color: var(--text-color);
   border: 1px solid var(--border-color);
-  padding: 3px 3px;
-  font-size: 0.5rem;
-  font-weight: 300;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  padding: 0.45rem 0.6rem 0.45rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  cursor: pointer;
   position: relative;
   overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn-icon {
   background-color: var(--primary-color);
   color: #fff;
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: -1rem;
+  flex-shrink: 0;
+  font-size: 0.78rem;
 }
 
 .btn-primary:hover {
@@ -109,7 +115,7 @@
     padding: 1rem 0.5rem;
   }
   .btn-primary {
-    padding: 0.4rem 1.2rem;
-    font-size: 1rem;
+    padding: 0.4rem 0.5rem 0.4rem 0.85rem;
+    font-size: 0.78rem;
   }
 }

@@ -22,12 +22,16 @@ const Home = () => {
         </p>
 
         <div className="home-actions">
-          <button className="btn-primary">
+          <a
+            href="/Soufiane_El_Basraoui_CV.pdf"
+            download="Soufiane_El_Basraoui_CV.pdf"
+            className="btn-primary"
+          >
             Download Cv
             <span className="btn-icon">
               <FiDownload />
             </span>
-          </button>
+          </a>
         </div>
       </div>
     </section>

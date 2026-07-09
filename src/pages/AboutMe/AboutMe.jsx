@@ -77,7 +77,12 @@ const AboutMe = () => {
           I am dedicated to building high-performance applications that solve real-world problems through technical excellence.
         </p>
         <div className="about-actions">
-           <a href="/cv.pdf" download className="btn-primary">Download CV</a>
+           <a 
+            href="/Soufiane_El_Basraoui_CV.pdf"
+            download="Soufiane_El_Basraoui_CV.pdf"
+            className="btn-primary">
+              Download CV
+            </a>
            <a href="/contact" className="btn-secondary">Contact Me</a>
         </div>
       </div>
