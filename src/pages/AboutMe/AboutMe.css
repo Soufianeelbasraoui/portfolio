@@ -235,7 +235,7 @@
 
 @media (max-width: 480px) {
   .about-container {
-    padding: 1.5rem 0.5rem;
+    padding: 1.5rem 0.75rem;
   }
   .about-actions {
     flex-direction: column;
@@ -244,6 +244,9 @@
   .btn-primary, .btn-secondary {
     text-align: center;
     width: 100%;
+  }
+  .skill-box {
+    padding: 1rem;
   }
   .timeline-column {
     padding-left: 50px;

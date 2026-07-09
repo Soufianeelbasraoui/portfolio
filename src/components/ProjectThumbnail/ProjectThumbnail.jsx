@@ -11,7 +11,7 @@ const ProjectThumbnail = ({ src, alt, badgeText }) => {
           style={{
             width: '100%',
             height: '100%',
-            objectFit: 'contain',
+            objectFit: 'cover',
             display: 'block',
             transition: 'transform 0.5s ease',
             willChange: 'transform',

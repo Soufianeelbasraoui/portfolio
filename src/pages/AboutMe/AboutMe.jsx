@@ -5,14 +5,20 @@ import './AboutMe.css';
  
 
 const skills = [
-  { name: 'Java & Spring Boot', percent: 90 },
-  { name: 'PHP & Laravel', percent: 90 },
-  { name: 'MERN Stack (React, Node, Express)', percent: 85 },
-  { name: 'React.js & Next.js', percent: 90 },
-  { name: 'Tailwind CSS & bootstrap css', percent: 80 },
-  { name: 'SQL & NoSQL (MySQL, MongoDB)', percent: 85 },
-  { name: 'UML & System Architecture', percent: 90 },
-  { name: 'Figma (UI/UX Design)', percent: 70 }
+  { name: 'Java', percent: 90 },
+  { name: 'Spring Boot', percent: 90 },
+  { name: 'React.js', percent: 90 },
+  { name: 'JavaScript (ES6+)', percent: 90 },
+  { name: 'PHP & Laravel', percent: 85 },
+  { name: 'Node.js & Express.js', percent: 85 },
+  { name: 'HTML5 & CSS3', percent: 95 },
+  { name: 'Bootstrap & Tailwind CSS', percent: 80 },
+  { name: 'MySQL & MongoDB', percent: 85 },
+  { name: 'REST API Development', percent: 90 },
+  { name: 'Git, GitHub', percent: 90 },
+  { name: 'Postman', percent: 85 },
+  { name: 'UML & System Design', percent: 85 },
+  { name: 'Figma (UI/UX)', percent: 75 }
 ];
 
 const timeline = [
