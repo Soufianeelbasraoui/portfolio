@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FiPhone, FiMail, FiMapPin, FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi';
 import './ContactMe.css';
-import { supabase } from '../../supabaseClient';
+import { supabase, isSupabaseConfigured } from '../../supabaseClient';
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -25,8 +25,16 @@ const ContactMe = () => {
     setLoading(true);
     setStatus({ type: '', message: '' });
 
+    if (!isSupabaseConfigured) {
+      setLoading(false);
+      setStatus({
+        type: 'error',
+        message: 'Supabase is not configured yet. Please set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in your .env file.'
+      });
+      return;
+    }
+
     try {
-      // 1. Save the message in the contacts table
       const { error: dbError } = await supabase
         .from('contacts')
         .insert([
@@ -41,7 +49,6 @@ const ContactMe = () => {
         throw new Error(`Database error: ${dbError.message || 'Failed to save submission.'}`);
       }
 
-      // 2. Automatically send an email using Supabase Edge Function
       const { data: functionData, error: functionError } = await supabase.functions.invoke('send-email', {
         body: {
           name: formData.name,
@@ -54,7 +61,6 @@ const ContactMe = () => {
         throw new Error(`Email delivery failed: ${functionError.message || 'Failed to send notification email.'}`);
       }
 
-      // Check if the Edge Function returned an error in the response body
       if (functionData && functionData.error) {
         throw new Error(`Email delivery failed: ${functionData.error}`);
       }

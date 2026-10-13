@@ -255,7 +255,7 @@
     left: -50px;
   }
   .timeline-line {
-    left: 21px; /* Mid-point of 42px icon */
+    left: 21px; 
   }
   .timeline-icon > div {
     width: 40px !important;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiCode, FiLayout, FiDatabase, FiServer, FiSmartphone, FiSettings } from 'react-icons/fi';
+import { FiCode, FiLayout, FiServer, FiSmartphone } from 'react-icons/fi';
 import './MyServices.css';
 
 const services = [
@@ -11,12 +11,7 @@ const services = [
   {
     icon: <FiServer />,
     title: 'Backend Development',
-    description: 'Building robust and scalable server-side applications and APIs using java Spring Boot, Node.js, and laravel.'
-  },
-  {
-    icon: <FiDatabase />,
-    title: 'Database Management',
-    description: 'Designing and optimizing database schemas with MySQL and PostgreSQL for efficient data storage.'
+    description: 'Building robust and scalable server-side applications and APIs using Java Spring Boot, Node.js, and Laravel.'
   },
   {
     icon: <FiCode />,
@@ -27,11 +22,6 @@ const services = [
     icon: <FiSmartphone />,
     title: 'Responsive Design',
     description: 'Ensuring your application looks and works perfectly on all devices, from desktops to mobile phones.'
-  },
-  {
-    icon: <FiSettings />,
-    title: 'API Integration',
-    description: 'Connecting your platform with third-party services and building custom RESTful APIs.'
   }
 ];
 
