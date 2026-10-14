@@ -12,7 +12,7 @@ import healt from "../../assets/healt.png";
 const projects = [
   {
     id: 'souk-transport',
-    title: 'SoukTransport V2 — Transport Collaboratif',
+    title: 'SoukTransport — Transport Collaboratif',
     category: 'Full-Stack',
     categoryLabel: 'Full-Stack',
     description:
