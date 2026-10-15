@@ -27,20 +27,21 @@ const projects = [
     tags: ['React 19', 'Spring Boot 3', 'Java 21', 'Spring Security', 'JWT', 'MySQL', 'Docker', 'Flyway']
   },
   {
-    id: 'gestion-medicale',
-    title: 'Système de Gestion Médicale',
-    category: 'Backend',
-    categoryLabel: 'Backend & API',
+    id: 'healthcare-gestion-medicale',
+    title: 'HealthCare+ — Système de Gestion Médicale',
+    category: 'Full-Stack',
+    categoryLabel: 'Full-Stack',
+    categories: ['Full-Stack', 'Backend'],
     description:
-      'API REST sécurisée (JWT) pour la gestion complète des patients, médecins, rendez-vous et dossiers médicaux. Intègre l’authentification par rôles, pagination, migrations Flyway et Docker.',
+      'Application web Full Stack dédiée à la gestion médicale : gestion complète des patients, des médecins, prise de rendez-vous, dossiers médicaux et tableau de bord statistique. Intègre une API REST sécurisée avec authentification JWT et gestion des rôles.',
     img: healt,
-    demoLink: 'https://github.com/ENAA-School-Student/Syst-me-de-Gestion-M-dicale.git',
+    demoLink: 'https://github.com/Soufianeelbasraoui/HealthCare-Frontend.git',
     codeLink: 'https://github.com/ENAA-School-Student/Syst-me-de-Gestion-M-dicale.git',
-    demoLabel: 'Consulter API',
-    codeLabel: 'Code',
-    objectPosition: 'top center',
+    demoLabel: 'Frontend',
+    codeLabel: 'Backend',
+    objectPosition: 'center center',
     isLive: false,
-    tags: ['Java 21', 'Spring Boot', 'MySQL', 'JWT', 'Flyway', 'Docker']
+    tags: ['Java 21', 'Spring Boot', 'React.js', 'MySQL', 'JWT', 'Flyway', 'Docker']
   },
   {
     id: 'recipe-app',
@@ -99,7 +100,10 @@ const MyProjects = () => {
 
   const filteredProjects = activeCategory === 'all'
     ? projects
-    : projects.filter(p => p.category === activeCategory);
+    : projects.filter(p => 
+        p.category === activeCategory || 
+        (Array.isArray(p.categories) && p.categories.includes(activeCategory))
+      );
 
   return (
     <section className="projects-container">
@@ -116,7 +120,10 @@ const MyProjects = () => {
             const Icon = cat.icon;
             const count = cat.id === 'all' 
               ? projects.length 
-              : projects.filter(p => p.category === cat.id).length;
+              : projects.filter(p => 
+                  p.category === cat.id || 
+                  (Array.isArray(p.categories) && p.categories.includes(cat.id))
+                ).length;
             
             return (
               <button
